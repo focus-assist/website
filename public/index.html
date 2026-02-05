@@ -20,15 +20,15 @@
       section[aria-describedby="hero-section-hgroup"] {
          position: relative;
          isolation: isolate;
-         min-height: 100vh;
-         min-height: 100dvh;
+         /* min-height: 100vh; */
+         min-height: 100svh;
 
          display: grid;
          grid-template-columns: 1fr 1fr;
          grid-template-rows: auto auto auto 1fr;
          align-content: center;
          column-gap: 4vw;
-         padding: 14vh var(--gutter) 8vh;
+         padding: 14svh var(--gutter) 8svh;
 
          &::before {
             content: "";
@@ -36,7 +36,7 @@
             inset: 0;
             z-index: -2;
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-attachment: local;
             background-size: cover;
             background-image: url('https://focus-assist.us/assets/media/product-pitch.webp');
             animation: fadeIn .9s ease-out both;

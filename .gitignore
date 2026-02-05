@@ -1,2 +1,3 @@
 .gitignore
 *.webp
+.DS_Store
