@@ -1,778 +1,367 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Focus Assist LLC — Professional Facilitation</title>
+<x-layouts.webpage>
+   <x-slot:pageTitle>Accessibility Statement - Focus Assist LLC</x-slot:pageTitle>
+   <x-slot:pageDescription>The primary landing page for Focus Assist LLC</x-slot:pageDescription>
+   <x-slot:metaData></x-slot:metaData>
+   <x-slot:pageScripts></x-slot:pageScripts>
+   <x-slot:pageStyles>
+      <!-- Page-specific styles -->
+      <style id="accessibility-statement-styles">
+         /* ═══════════════════════════════════════════
+            ACCESSIBILITY STATEMENT ARTICLE
+            ═══════════════════════════════════════════ */
+         article[aria-describedby="accessibility-statement-label"] {
+            padding: 140px var(--gutter) 80px;
+            max-width: 900px;
+            margin: 0 auto;
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Outfit:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+            /* Page Title */
+            & > hgroup {
+               margin-bottom: 48px;
+               padding-bottom: 32px;
+               border-bottom: 1px solid rgba(255, 255, 255, .08);
 
-   <link rel="stylesheet" href="/assets/styles/common.css">
-   
-   <!-- Page-specific styles -->
-   <style id="accessibility-statement-styles">
-      /* ═══════════════════════════════════════════
-         ACCESSIBILITY STATEMENT ARTICLE
-         ═══════════════════════════════════════════ */
-      article[aria-describedby="accessibility-statement-label"] {
-         padding: 140px var(--gutter) 80px;
-         max-width: 900px;
-         margin: 0 auto;
-
-         /* Page Title */
-         & > hgroup {
-            margin-bottom: 48px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid rgba(255, 255, 255, .08);
-
-            & > h1 {
-               font-family: var(--font-d);
-               font-size: clamp(32px, 5vw, 52px);
-               font-weight: 700;
-               letter-spacing: -.02em;
-               line-height: 1.1;
-               color: var(--white);
-            }
-         }
-
-         /* Content Sections */
-         & > div {
-            margin-bottom: 48px;
-
-            &:last-child {
-               margin-bottom: 0;
+               & > h1 {
+                  font-family: var(--font-d);
+                  font-size: clamp(32px, 5vw, 52px);
+                  font-weight: 700;
+                  letter-spacing: -.02em;
+                  line-height: 1.1;
+                  color: var(--white);
+               }
             }
 
-            /* Section Headings */
-            & > h2 {
-               font-family: var(--font-d);
-               font-size: clamp(22px, 3vw, 28px);
-               font-weight: 600;
-               letter-spacing: -.01em;
-               color: var(--teal);
-               margin-bottom: 20px;
-            }
-
-            /* Paragraphs */
-            & > p {
-               font-size: 1rem;
-               color: var(--g200);
-               line-height: 1.8;
-               margin-bottom: 16px;
+            /* Content Sections */
+            & > div {
+               margin-bottom: 48px;
 
                &:last-child {
                   margin-bottom: 0;
                }
-            }
 
-            /* Links */
-            & a {
-               color: var(--teal);
-               text-decoration: underline;
-               text-decoration-color: rgba(104, 191, 209, .4);
-               text-underline-offset: 3px;
-               transition: text-decoration-color .2s;
-
-               &:hover {
-                  text-decoration-color: var(--teal);
+               /* Section Headings */
+               & > h2 {
+                  font-family: var(--font-d);
+                  font-size: clamp(22px, 3vw, 28px);
+                  font-weight: 600;
+                  letter-spacing: -.01em;
+                  color: var(--teal);
+                  margin-bottom: 20px;
                }
-            }
 
-            /* Ordered Lists (Main Principles) */
-            & > ol {
-               list-style: none;
-               counter-reset: principles;
-               display: flex;
-               flex-direction: column;
-               gap: 32px;
+               /* Paragraphs */
+               & > p {
+                  font-size: 1rem;
+                  color: var(--g200);
+                  line-height: 1.8;
+                  margin-bottom: 16px;
 
-               & > li {
-                  counter-increment: principles;
-                  position: relative;
-                  padding-left: 48px;
-
-                  &::before {
-                     content: counter(principles) ".";
-                     position: absolute;
-                     left: 0;
-                     top: 0;
-                     font-family: var(--font-d);
-                     font-size: 1.5rem;
-                     font-weight: 700;
-                     color: var(--teal);
+                  &:last-child {
+                     margin-bottom: 0;
                   }
+               }
 
-                  /* Principle Title */
-                  & > span {
-                     display: block;
-                     font-family: var(--font-d);
-                     font-size: 1.2rem;
-                     font-weight: 600;
-                     color: var(--white);
-                     margin-bottom: 16px;
+               /* Links */
+               & a {
+                  color: var(--teal);
+                  text-decoration: underline;
+                  text-decoration-color: rgba(104, 191, 209, .4);
+                  text-underline-offset: 3px;
+                  transition: text-decoration-color .2s;
+
+                  &:hover {
+                     text-decoration-color: var(--teal);
                   }
+               }
 
-                  /* Nested Unordered Lists */
-                  & > ul {
-                     list-style: none;
-                     display: flex;
-                     flex-direction: column;
-                     gap: 14px;
+               /* Ordered Lists (Main Principles) */
+               & > ol {
+                  list-style: none;
+                  counter-reset: principles;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 32px;
 
-                     & > li {
-                        position: relative;
-                        padding-left: 20px;
-                        font-size: .95rem;
-                        color: var(--g200);
-                        line-height: 1.75;
+                  & > li {
+                     counter-increment: principles;
+                     position: relative;
+                     padding-left: 48px;
 
-                        &::before {
-                           content: "";
-                           position: absolute;
-                           left: 0;
-                           top: 10px;
-                           width: 6px;
-                           height: 6px;
-                           border-radius: 50%;
-                           background: var(--g500);
-                        }
+                     &::before {
+                        content: counter(principles) ".";
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        font-family: var(--font-d);
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        color: var(--teal);
+                     }
 
-                        /* Emphasis in list items */
-                        & > em:first-child {
-                           color: var(--white);
-                           font-style: normal;
-                           font-weight: 500;
-                        }
+                     /* Principle Title */
+                     & > span {
+                        display: block;
+                        font-family: var(--font-d);
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        color: var(--white);
+                        margin-bottom: 16px;
+                     }
 
-                        /* Nested span for multi-line items */
-                        & > span {
-                           display: block;
+                     /* Nested Unordered Lists */
+                     & > ul {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 14px;
 
+                        & > li {
+                           position: relative;
+                           padding-left: 20px;
+                           font-size: .95rem;
+                           color: var(--g200);
+                           line-height: 1.75;
+
+                           &::before {
+                              content: "";
+                              position: absolute;
+                              left: 0;
+                              top: 10px;
+                              width: 6px;
+                              height: 6px;
+                              border-radius: 50%;
+                              background: var(--g500);
+                           }
+
+                           /* Emphasis in list items */
                            & > em:first-child {
                               color: var(--white);
                               font-style: normal;
                               font-weight: 500;
                            }
-                        }
 
-                        /* Deeply nested lists */
-                        & > ul, & > ol {
-                           margin-top: 12px;
-                           margin-left: 4px;
-                           display: flex;
-                           flex-direction: column;
-                           gap: 8px;
-
-                           & > li {
-                              font-size: .9rem;
-                              padding-left: 18px;
-
-                              &::before {
-                                 width: 5px;
-                                 height: 5px;
-                                 top: 9px;
-                                 background: var(--g500);
-                              }
+                           /* Nested span for multi-line items */
+                           & > span {
+                              display: block;
 
                               & > em:first-child {
-                                 color: var(--g100);
+                                 color: var(--white);
                                  font-style: normal;
                                  font-weight: 500;
                               }
                            }
-                        }
 
-                        /* Nested ordered lists */
-                        & > ol {
-                           list-style: none;
-                           counter-reset: subitems;
+                           /* Deeply nested lists */
+                           & > ul, & > ol {
+                              margin-top: 12px;
+                              margin-left: 4px;
+                              display: flex;
+                              flex-direction: column;
+                              gap: 8px;
 
-                           & > li {
-                              counter-increment: subitems;
+                              & > li {
+                                 font-size: .9rem;
+                                 padding-left: 18px;
 
-                              &::before {
-                                 content: counter(subitems) ".";
-                                 position: absolute;
-                                 left: 0;
-                                 top: 0;
-                                 width: auto;
-                                 height: auto;
-                                 border-radius: 0;
-                                 background: none;
-                                 font-size: .85rem;
-                                 font-weight: 600;
-                                 color: var(--g400);
+                                 &::before {
+                                    width: 5px;
+                                    height: 5px;
+                                    top: 9px;
+                                    background: var(--g500);
+                                 }
+
+                                 & > em:first-child {
+                                    color: var(--g100);
+                                    font-style: normal;
+                                    font-weight: 500;
+                                 }
+                              }
+                           }
+
+                           /* Nested ordered lists */
+                           & > ol {
+                              list-style: none;
+                              counter-reset: subitems;
+
+                              & > li {
+                                 counter-increment: subitems;
+
+                                 &::before {
+                                    content: counter(subitems) ".";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: auto;
+                                    height: auto;
+                                    border-radius: 0;
+                                    background: none;
+                                    font-size: .85rem;
+                                    font-weight: 600;
+                                    color: var(--g400);
+                                 }
                               }
                            }
                         }
                      }
                   }
                }
-            }
 
-            /* Unordered Lists (Feedback section) */
-            & > ul {
-               list-style: none;
-               display: flex;
-               flex-direction: column;
-               gap: 12px;
-               margin-bottom: 20px;
+               /* Unordered Lists (Feedback section) */
+               & > ul {
+                  list-style: none;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 12px;
+                  margin-bottom: 20px;
 
-               & > li {
-                  position: relative;
-                  padding-left: 24px;
-                  font-size: .95rem;
-                  color: var(--g200);
-                  line-height: 1.75;
+                  & > li {
+                     position: relative;
+                     padding-left: 24px;
+                     font-size: .95rem;
+                     color: var(--g200);
+                     line-height: 1.75;
 
-                  &::before {
-                     content: "";
-                     position: absolute;
-                     left: 0;
-                     top: 10px;
-                     width: 8px;
-                     height: 8px;
-                     border-radius: 50%;
-                     background: linear-gradient(135deg, var(--teal), var(--blue-bright));
-                  }
+                     &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 10px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background: linear-gradient(135deg, var(--teal), var(--blue-bright));
+                     }
 
-                  & > em:first-child {
-                     color: var(--white);
-                     font-style: normal;
-                     font-weight: 500;
+                     & > em:first-child {
+                        color: var(--white);
+                        font-style: normal;
+                        font-weight: 500;
+                     }
                   }
                }
-            }
 
-            /* Inline Code */
-            & code.html {
-               font-family: var(--font-m);
-               font-size: .85em;
-               padding: 2px 7px;
-               border-radius: 5px;
-               background: rgba(104, 191, 209, .1);
-               color: var(--teal-light);
-               border: 1px solid rgba(104, 191, 209, .2);
-            }
+               /* Inline Code */
+               & code.html {
+                  font-family: var(--font-m);
+                  font-size: .85em;
+                  padding: 2px 7px;
+                  border-radius: 5px;
+                  background: rgba(104, 191, 209, .1);
+                  color: var(--teal-light);
+                  border: 1px solid rgba(104, 191, 209, .2);
+               }
 
-            /* Time element */
-            & time {
-               color: var(--g400);
-            }
-         }
-      }
-
-      /* ═══════════════════════════════════════════
-         RESPONSIVE
-         ═══════════════════════════════════════════ */
-      @media (max-width: 768px) {
-         article[aria-describedby="accessibility-statement-label"] {
-            padding: 100px var(--gutter) 60px;
-
-            & > hgroup {
-               margin-bottom: 32px;
-               padding-bottom: 24px;
-            }
-
-            & > div {
-               margin-bottom: 36px;
-
-               & > ol > li {
-                  padding-left: 36px;
-
-                  &::before {
-                     font-size: 1.25rem;
-                  }
-
-                  & > span {
-                     font-size: 1.1rem;
-                  }
+               /* Time element */
+               & time {
+                  color: var(--g400);
                }
             }
          }
-      }
-   </style>
 
-</head>
-<body>
-   <a id="skip-link" href="#main"><span>Skip to Main Content</span></a>
+         /* ═══════════════════════════════════════════
+            RESPONSIVE
+            ═══════════════════════════════════════════ */
+         @media (max-width: 768px) {
+            article[aria-describedby="accessibility-statement-label"] {
+               padding: 100px var(--gutter) 60px;
 
-   <header class="acm-header" id="site-header">
-      <div class="acm-header-inner">
-         <a href="/" class="acm-logo" aria-label="Focus Assist — Home">Focus Assist</a>
+               & > hgroup {
+                  margin-bottom: 32px;
+                  padding-bottom: 24px;
+               }
 
-         <details class="acm-toggle" id="acm-toggle" open>
-            <summary aria-label="Toggle navigation menu">
-               <span class="acm-toggle-icon" aria-hidden="true"></span>
-               <span class="sr-only">Menu</span>
-            </summary>
+               & > div {
+                  margin-bottom: 36px;
 
-            <nav class="acm-nav" aria-label="Primary navigation">
-               <ul class="acm-list" role="menubar">
-                  <li role="none">
-                     <a href="#home" class="acm-link" role="menuitem" aria-current="page">Home</a>
+                  & > ol > li {
+                     padding-left: 36px;
+
+                     &::before {
+                        font-size: 1.25rem;
+                     }
+
+                     & > span {
+                        font-size: 1.1rem;
+                     }
+                  }
+               }
+            }
+         }
+      </style>
+   </x-slot:pageStyles>
+
+   <article aria-describedby="accessibility-statement-label">
+      <hgroup id="accessibility-statement-label">
+         <h1><span>Accessibility Statement</span></h1>
+      </hgroup>
+
+      <div aria-labelledby="our-commitment-to-universal-access">
+         <h2 id="our-commitment-to-universal-access">Our Commitment to Universal Access</h2>
+         <p>We believe the internet must be accessible to everyone, without exception. Our approach, which we call Accessibility-First Design, prioritizes equal access to information above all else. Every piece of data on our site is structured to be available and understandable, regardless of how you access it—be it with a screen reader, a keyboard, a mobile phone, a desktop, a game console, or any other technology.</p>
+         <p>We do not create separate versions of our site for different devices. Instead, we build one semantically perfect structure using HTML and ARIA that remains constant. Styling adapts to your device and preferences, but the core content and functionality do not.</p>
+         <p>If you encounter any barrier to access, or find any feature frustrating or confusing, we urgently want to know. Please contact us. Your feedback is essential—whether we've gone overboard, haven't done enough, or were entirely wrong. We also welcome you to share what works well for you and if our methods improve your experience compared to standard practices.</p>
+      </div>
+
+      <div aria-labelledby="our-accessibility-first-design-principles">
+         <h2 id="our-accessibility-first-design-principles">Our Accessibility-First Design Principles</h2>
+         <p>This is the technical blueprint of our commitment. We follow these core tenets in every aspect of our design and development.</p>
+
+         <ol>
+            <li>
+               <span>Accessibility Before Style</span>
+               <ul>
+                  <li><em>Semantic HTML & ARIA are Sovereign:</em> Our page structure and meaning are built with clean, standard HTML and ARIA attributes. Visual styling is always a secondary layer that never compromises or alters this foundational accessibility.</li>
+                  <li><em>No <code class="html">&lt;div&gt;</code> Soup:</em> We avoid meaningless HTML containers. Every tag is chosen for its semantic purpose (like <code class="html">&lt;article&gt;</code>, <code class="html">&lt;nav&gt;</code>, <code class="html">&lt;button&gt;</code>), not as a hook for styling, ensuring clarity for assistive technologies and search engines.</li>
+                  <li><em>One Source of Truth:</em> The HTML for a page is identical for all users and devices. There is no separate mobile, desktop, or console HTML. Interactive elements, like collapsible menus, use native HTML (e.g., <code class="html">&lt;details&gt;</code>/<code class="html">&lt;summary&gt;</code>) to function fully without any CSS or JavaScript.</li>
+                  <li><em>Built-In SEO & Clarity:</em> We implement comprehensive page metadata and reinforce on-page structures with appropriate in-line metadata (like <a href="http://Schema.org" target="_blank" rel="noopener">Schema.org</a>), making our content easily discoverable and understandable.</li>
+                  <li><em>Reader Control:</em> You should be able to choose your preferred font to support needs like dyslexia. Our styling does not prevent browser or extension-based font overrides.</li>
+                  <li>
+                     <span><em>Separation of Concerns:</em></span>
+                     <ul>
+                        <li><em>Icons</em> are implemented using CSS and are always accompanied by descriptive text for screen readers.</li>
+                        <li><em>Decorative images</em> that are not content or product assets are implemented as CSS background images, keeping HTML clean for assistive tools.</li>
+                     </ul>
                   </li>
-
-                  <li role="none">
-                     <details class="acm-dropdown" data-acm-dropdown>
-                        <summary class="acm-dropdown-toggle" role="menuitem" aria-haspopup="true">Services</summary>
-                        <div class="acm-panel" role="menu">
-                           <ul class="acm-panel-list">
-                              <li role="none"><a href="/services/agile-transformation" class="acm-panel-link" role="menuitem">Agile Transformation</a></li>
-                              <li role="none"><a href="/services/agile-coaching" class="acm-panel-link" role="menuitem">Agile Coaching</a></li>
-                              <li role="none"><a href="/services/product-management" class="acm-panel-link" role="menuitem">Product Management</a></li>
-                              <li role="none"><a href="/services/project-management" class="acm-panel-link" role="menuitem">Project Management</a></li>
-                              <li class="acm-divider" role="separator"></li>
-                              <li role="none"><a href="/services" class="acm-panel-link" role="menuitem">View All Services</a></li>
-                           </ul>
-                        </div>
-                     </details>
+                  <li>
+                     <span><em>Meaningful Code:</em></span>
+                     <ul>
+                        <li><em>Classes</em> are used to "classify" data and structure, not dictate style. We avoid CSS frameworks that impose their own markup.</li>
+                        <li><em>IDs</em> are human-comprehensible (e.g., "main-navigation"), not random strings, for clarity in code and URL fragments.</li>
+                     </ul>
                   </li>
-
-                  <li role="none">
-                     <details class="acm-dropdown" data-acm-dropdown>
-                        <summary class="acm-dropdown-toggle" role="menuitem" aria-haspopup="true">Products</summary>
-                        <div class="acm-panel" role="menu">
-                           <ul class="acm-panel-list">
-                              <li role="none"><a href="/products/vista-opus" class="acm-panel-link" role="menuitem">Vista Opus</a></li>
-                              <li role="none"><a href="/products/libri-res" class="acm-panel-link" role="menuitem">Libri Res</a></li>
-                              <li role="none"><a href="/products/diarium-salus" class="acm-panel-link" role="menuitem">Diarium Salus</a></li>
-                           </ul>
-                        </div>
-                     </details>
-                  </li>
-
-                  <li role="none">
-                     <a href="#about" class="acm-link" role="menuitem">About</a>
-                  </li>
-
-                  <li role="none">
-                     <a href="#contact" class="acm-link" role="menuitem">Contact Us</a>
+                  <li><em>Comprehensive Theming:</em> We provide multiple theme options, including "light", "dark", "high-contrast", "low-light reading", and "greyscale". Themes are built with CSS variables and degrade gracefully—if a theme fails to load, core styling remains functional.</li>
+                  <li><em>Performance Aware:</em> Shared styles and scripts are in external files for caching efficiency. Page-specific styles and scripts are embedded to minimize requests and render-blocking for that page.</li>
+               </ul>
+            </li>
+            <li>
+               <span>Prioritized Visual Styling</span>
+               <ul>
+                  <li><em>Consistent Core UX:</em> Every device can access and perform all the same actions. The experience is consistent; only the presentation layer changes.</li>
+                  <li>
+                     <span><em>Styling Priority:</em> Pages will <em>look</em> a certain way based on what devices <em>access</em> our site:</span>
+                     <ol>
+                        <li>Mobile devices</li>
+                        <li>Desktop computers</li>
+                        <li>TVs and game consoles</li>
+                        <li>Printers (targeting 8.5” x 11” pages)</li>
+                     </ol>
                   </li>
                </ul>
-            </nav>
-         </details>
+            </li>
+         </ol>
       </div>
-   </header>
 
-   <main id="main">
-
-      <article aria-describedby="accessibility-statement-label">
-         <hgroup id="accessibility-statement-label">
-            <h1><span>Accessibility Statement</span></h1>
-         </hgroup>
-
-         <div aria-labelledby="our-commitment-to-universal-access">
-            <h2 id="our-commitment-to-universal-access">Our Commitment to Universal Access</h2>
-            <p>We believe the internet must be accessible to everyone, without exception. Our approach, which we call Accessibility-First Design, prioritizes equal access to information above all else. Every piece of data on our site is structured to be available and understandable, regardless of how you access it—be it with a screen reader, a keyboard, a mobile phone, a desktop, a game console, or any other technology.</p>
-            <p>We do not create separate versions of our site for different devices. Instead, we build one semantically perfect structure using HTML and ARIA that remains constant. Styling adapts to your device and preferences, but the core content and functionality do not.</p>
-            <p>If you encounter any barrier to access, or find any feature frustrating or confusing, we urgently want to know. Please contact us. Your feedback is essential—whether we've gone overboard, haven't done enough, or were entirely wrong. We also welcome you to share what works well for you and if our methods improve your experience compared to standard practices.</p>
-         </div>
-
-         <div aria-labelledby="our-accessibility-first-design-principles">
-            <h2 id="our-accessibility-first-design-principles">Our Accessibility-First Design Principles</h2>
-            <p>This is the technical blueprint of our commitment. We follow these core tenets in every aspect of our design and development.</p>
-
-            <ol>
-               <li>
-                  <span>Accessibility Before Style</span>
-                  <ul>
-                     <li><em>Semantic HTML & ARIA are Sovereign:</em> Our page structure and meaning are built with clean, standard HTML and ARIA attributes. Visual styling is always a secondary layer that never compromises or alters this foundational accessibility.</li>
-                     <li><em>No <code class="html">&lt;div&gt;</code> Soup:</em> We avoid meaningless HTML containers. Every tag is chosen for its semantic purpose (like <code class="html">&lt;article&gt;</code>, <code class="html">&lt;nav&gt;</code>, <code class="html">&lt;button&gt;</code>), not as a hook for styling, ensuring clarity for assistive technologies and search engines.</li>
-                     <li><em>One Source of Truth:</em> The HTML for a page is identical for all users and devices. There is no separate mobile, desktop, or console HTML. Interactive elements, like collapsible menus, use native HTML (e.g., <code class="html">&lt;details&gt;</code>/<code class="html">&lt;summary&gt;</code>) to function fully without any CSS or JavaScript.</li>
-                     <li><em>Built-In SEO & Clarity:</em> We implement comprehensive page metadata and reinforce on-page structures with appropriate in-line metadata (like <a href="http://Schema.org" target="_blank" rel="noopener">Schema.org</a>), making our content easily discoverable and understandable.</li>
-                     <li><em>Reader Control:</em> You should be able to choose your preferred font to support needs like dyslexia. Our styling does not prevent browser or extension-based font overrides.</li>
-                     <li>
-                        <span><em>Separation of Concerns:</em></span>
-                        <ul>
-                           <li><em>Icons</em> are implemented using CSS and are always accompanied by descriptive text for screen readers.</li>
-                           <li><em>Decorative images</em> that are not content or product assets are implemented as CSS background images, keeping HTML clean for assistive tools.</li>
-                        </ul>
-                     </li>
-                     <li>
-                        <span><em>Meaningful Code:</em></span>
-                        <ul>
-                           <li><em>Classes</em> are used to "classify" data and structure, not dictate style. We avoid CSS frameworks that impose their own markup.</li>
-                           <li><em>IDs</em> are human-comprehensible (e.g., "main-navigation"), not random strings, for clarity in code and URL fragments.</li>
-                        </ul>
-                     </li>
-                     <li><em>Comprehensive Theming:</em> We provide multiple theme options, including "light", "dark", "high-contrast", "low-light reading", and "greyscale". Themes are built with CSS variables and degrade gracefully—if a theme fails to load, core styling remains functional.</li>
-                     <li><em>Performance Aware:</em> Shared styles and scripts are in external files for caching efficiency. Page-specific styles and scripts are embedded to minimize requests and render-blocking for that page.</li>
-                  </ul>
-               </li>
-               <li>
-                  <span>Prioritized Visual Styling</span>
-                  <ul>
-                     <li><em>Consistent Core UX:</em> Every device can access and perform all the same actions. The experience is consistent; only the presentation layer changes.</li>
-                     <li>
-                        <span><em>Styling Priority:</em> Pages will <em>look</em> a certain way based on what devices <em>access</em> our site:</span>
-                        <ol>
-                           <li>Mobile devices</li>
-                           <li>Desktop computers</li>
-                           <li>TVs and game consoles</li>
-                           <li>Printers (targeting 8.5” x 11” pages)</li>
-                        </ol>
-                     </li>
-                  </ul>
-               </li>
-            </ol>
-         </div>
-
-         <div aria-labelledby="your-feedback-drives-improvement">
-            <h2 id="your-feedback-drives-improvement">Your Feedback Drives Improvement</h2>
-            <p>Our work is never done. Accessibility is a journey of learning and adaptation.</p>
-            <ul>
-               <li><em>Report a Problem:</em> Encountered a barrier? Please tell us. We will acknowledge your report, investigate, and work toward a solution.</li>
-               <li><em>Share Your Experience:</em> Do you prefer our approach? Did we get something right? Your positive feedback helps us validate our methods.</li>
-               <li><em>Suggest an Enhancement:</em> Have an idea for a feature, theme, or improvement that would make our site more accessible to you? We are eager to listen.</li>
-            </ul>
-            <p><a href="/contact?subject=accessibility">Contact Us</a> for Accessibility Feedback: <a href="mailto:accessibility@focus-assist.us">accessibility@focus-assist.us</a></p>
-
-            <p>We are committed to responding to all accessibility feedback in a timely manner and to making the necessary changes to ensure our site is a model of inclusive design.</p>
-            <p>Last Updated: <time datetime="2026-02-04">4 February 2026</time></p>
-         </div>
-      </article>
-
-   </main>
-
-   <footer>
-      <section>
-         <hgroup>
-            <h2><span>Focus Assist</span></h2>
-         </hgroup>
-         <p>Professional facilitation in Product Management and Project Management. Purpose-built software and expert professionals, available worldwide.</p>
-      </section>
-
-      <section aria-labelledby="quick-links-footer-section-label">
-         <hgroup class="sr-only">
-            <h3><span id="quick-links-footer-section-label">Quick Links</span></h3>
-         </hgroup>
-
-         <div aria-labelledby="quick-links-products-label">
-            <hgroup>
-               <h4><span id="quick-links-products-label">Products</span></h4>
-            </hgroup>
-
-            <ul>
-               <li><a href=""><span>Vista Opus</span></a></li>
-               <li><a href=""><span>Libri Res</span></a></li>
-               <li><a href=""><span>Diarium Salus</span></a></li>
-            </ul>
-         </div>
-
-         <div aria-labelledby="quick-links-services-label">
-            <hgroup>
-               <h4><span id="quick-links-services-label">Services</span></h4>
-            </hgroup>
-
-            <ul>
-               <li><a href=""><span>Agile Transformation</span></a></li>
-               <li><a href=""><span>Agile Coaching</span></a></li>
-               <li><a href=""><span>Product Management</span></a></li>
-               <li><a href=""><span>Project Management</span></a></li>
-               <li><a href=""><span>Scrum and Scrum@Scale</span></a></li>
-               <li><a href=""><span>Scaled Agile Framework (SAFe)</span></a></li>
-            </ul>
-         </div>
-
-         <div aria-labelledby="quick-links-company-label">
-            <hgroup>
-               <h4><span id="quick-links-company-label">Company</span></h4>
-            </hgroup>
-
-            <ul>
-               <li><a href=""><span>About Us</span></a></li>
-               <li><a href=""><span>Blog</span></a></li>
-               <li><a href=""><span>Contact Us</span></a></li>
-            </ul>
-         </div>
-      </section>
-
-      <section aria-labelledby="legal-footer-section-label">
-         <hgroup class="sr-only">
-            <h3><span id="legal-footer-section-label">Legal</span></h3>
-         </hgroup>
-
-         <p>&copy; 2026 Focus Assist LLC. All rights reserved.</p>
-
+      <div aria-labelledby="your-feedback-drives-improvement">
+         <h2 id="your-feedback-drives-improvement">Your Feedback Drives Improvement</h2>
+         <p>Our work is never done. Accessibility is a journey of learning and adaptation.</p>
          <ul>
-            <li><a href="/accessibility-statement">Accessibility Statement</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms-of-service">Terms of Service</a></li>
+            <li><em>Report a Problem:</em> Encountered a barrier? Please tell us. We will acknowledge your report, investigate, and work toward a solution.</li>
+            <li><em>Share Your Experience:</em> Do you prefer our approach? Did we get something right? Your positive feedback helps us validate our methods.</li>
+            <li><em>Suggest an Enhancement:</em> Have an idea for a feature, theme, or improvement that would make our site more accessible to you? We are eager to listen.</li>
          </ul>
-      </section>
-   </footer>
+         <p><a href="/contact?subject=accessibility">Contact Us</a> for Accessibility Feedback: <a href="mailto:accessibility@focus-assist.us">accessibility@focus-assist.us</a></p>
 
-   <!-- ACM Menu Script -->
-   <script data-component="accessible-menu">
-   /** ACCESSIBLE COLLAPSIBLE MENU (ACM) */
-   (function ACM() {
-      'use strict';
-
-      const CONFIG = {
-         selectors: { toggle: '#acm-toggle', dropdown: '[data-acm-dropdown]', panel: '.acm-panel', nested: '.acm-nested' },
-         classes: { right: 'acm-panel--right', above: 'acm-panel--above', left: 'acm-panel--left' },
-         breakpoint: 768,
-         padding: 16
-      };
-
-      const navToggle = document.querySelector(CONFIG.selectors.toggle);
-      const dropdowns = document.querySelectorAll(CONFIG.selectors.dropdown);
-
-      function getFocusable(container) {
-         return [...container.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"]), summary')]
-            .filter(el => el.offsetParent !== null);
-      }
-
-      function isNested(el) { return el.classList.contains('acm-nested'); }
-
-      function positionPanel(dropdown) {
-         const panel = dropdown.querySelector(CONFIG.selectors.panel);
-         if (!panel || window.innerWidth <= CONFIG.breakpoint) return;
-         panel.classList.remove(CONFIG.classes.right, CONFIG.classes.above, CONFIG.classes.left);
-         void panel.offsetHeight;
-         const rect = panel.getBoundingClientRect();
-         const vw = window.innerWidth, vh = window.innerHeight, pad = CONFIG.padding;
-         if (isNested(dropdown)) {
-            if (rect.right > vw - pad) panel.classList.add(CONFIG.classes.left);
-         } else {
-            if (rect.right > vw - pad) panel.classList.add(CONFIG.classes.right);
-         }
-         const newRect = panel.getBoundingClientRect();
-         if (newRect.bottom > vh - pad) panel.classList.add(CONFIG.classes.above);
-      }
-
-      function closeOthers(except) {
-         dropdowns.forEach(d => { if (d !== except && d.open && !d.contains(except)) d.open = false; });
-      }
-
-      function closeAll() {
-         dropdowns.forEach(d => d.open = false);
-         if (navToggle) navToggle.open = false;
-      }
-
-      function handleKey(e, dropdown) {
-         const panel = dropdown.querySelector(CONFIG.selectors.panel);
-         if (!panel) return;
-         const items = getFocusable(panel);
-         const idx = items.indexOf(document.activeElement);
-         switch (e.key) {
-            case 'Escape':
-               e.preventDefault(); e.stopPropagation();
-               dropdown.open = false;
-               dropdown.querySelector('summary').focus();
-               break;
-            case 'ArrowDown':
-               e.preventDefault();
-               items[(idx + 1) % items.length]?.focus();
-               break;
-            case 'ArrowUp':
-               e.preventDefault();
-               items[(idx - 1 + items.length) % items.length]?.focus();
-               break;
-            case 'ArrowRight': {
-               const nested = document.activeElement.closest(CONFIG.selectors.nested);
-               if (nested && !nested.open) {
-                  e.preventDefault(); nested.open = true;
-                  setTimeout(() => getFocusable(nested.querySelector(CONFIG.selectors.panel))[0]?.focus(), 10);
-               }
-               break;
-            }
-            case 'ArrowLeft':
-               if (isNested(dropdown)) {
-                  e.preventDefault(); dropdown.open = false;
-                  dropdown.querySelector('summary').focus();
-               }
-               break;
-            case 'Home': e.preventDefault(); items[0]?.focus(); break;
-            case 'End': e.preventDefault(); items[items.length - 1]?.focus(); break;
-            case 'Tab':
-               setTimeout(() => { if (!dropdown.contains(document.activeElement)) dropdown.open = false; }, 0);
-               break;
-         }
-      }
-
-      dropdowns.forEach(dropdown => {
-         const summary = dropdown.querySelector('summary');
-         dropdown.addEventListener('toggle', () => {
-            if (dropdown.open) {
-               positionPanel(dropdown);
-               if (!isNested(dropdown)) closeOthers(dropdown);
-            }
-         });
-         dropdown.addEventListener('keydown', e => {
-            if (dropdown.open) handleKey(e, dropdown);
-            else if (e.key === 'ArrowDown' && document.activeElement === summary) {
-               e.preventDefault(); dropdown.open = true;
-               setTimeout(() => getFocusable(dropdown.querySelector(CONFIG.selectors.panel))[0]?.focus(), 10);
-            }
-         });
-         summary.addEventListener('keydown', e => {
-            if (e.key === 'Enter' || e.key === ' ') {
-               setTimeout(() => {
-                  if (dropdown.open) getFocusable(dropdown.querySelector(CONFIG.selectors.panel))[0]?.focus();
-               }, 10);
-            }
-         });
-      });
-
-      if (navToggle) {
-         const mq = window.matchMedia(`(min-width: ${CONFIG.breakpoint + 1}px)`);
-         function setToggleState(desktop) {
-            if (desktop) {
-               navToggle.open = true;
-            } else if (!navToggle.hasAttribute('data-user-toggled')) {
-               navToggle.open = false;
-            }
-         }
-         setToggleState(mq.matches);
-         mq.addEventListener('change', e => {
-            navToggle.removeAttribute('data-user-toggled');
-            setToggleState(e.matches);
-         });
-         navToggle.addEventListener('toggle', () => {
-            if (window.innerWidth <= CONFIG.breakpoint) {
-               navToggle.setAttribute('data-user-toggled', '');
-            }
-            if (!navToggle.open) closeAll();
-         });
-      }
-
-      document.addEventListener('click', e => {
-         if (!e.target.closest(CONFIG.selectors.dropdown) && !e.target.closest(CONFIG.selectors.toggle)) {
-            dropdowns.forEach(d => d.open = false);
-            if (navToggle && window.innerWidth <= CONFIG.breakpoint) navToggle.open = false;
-         }
-      });
-      document.addEventListener('keydown', e => {
-         if (e.key === 'Escape') {
-            dropdowns.forEach(d => d.open = false);
-            if (navToggle && window.innerWidth <= CONFIG.breakpoint) navToggle.open = false;
-         }
-      });
-
-      let resizeTimer;
-      window.addEventListener('resize', () => {
-         clearTimeout(resizeTimer);
-         resizeTimer = setTimeout(() => dropdowns.forEach(d => { if (d.open) positionPanel(d); }), 100);
-      });
-
-      /* Gamepad support */
-      class GamepadInput {
-         constructor() {
-            this.state = {}; this.poll = null;
-            window.addEventListener('gamepadconnected', () => this.start());
-            window.addEventListener('gamepaddisconnected', () => this.stop());
-         }
-         start() { if (!this.poll) this.poll = setInterval(() => this.check(), 100); }
-         stop() { if (!navigator.getGamepads().some(g => g)) { clearInterval(this.poll); this.poll = null; } }
-         check() {
-            for (const gp of navigator.getGamepads()) {
-               if (!gp) continue;
-               const [ax0, ax1] = gp.axes, btns = gp.buttons;
-               this.input('up', btns[12]?.pressed || ax1 < -0.5);
-               this.input('down', btns[13]?.pressed || ax1 > 0.5);
-               this.input('left', btns[14]?.pressed || ax0 < -0.5);
-               this.input('right', btns[15]?.pressed || ax0 > 0.5);
-               this.input('a', btns[0]?.pressed);
-               this.input('b', btns[1]?.pressed);
-            }
-         }
-         input(name, pressed) {
-            if (pressed && !this.state[name]) {
-               const keys = { up: 'ArrowUp', down: 'ArrowDown', left: 'ArrowLeft', right: 'ArrowRight', a: 'Enter', b: 'Escape' };
-               document.activeElement.dispatchEvent(new KeyboardEvent('keydown', { key: keys[name], bubbles: true }));
-               if (name === 'a') document.activeElement.click?.();
-            }
-            this.state[name] = pressed;
-         }
-      }
-      new GamepadInput();
-   })();
-   </script>
-
-   <!-- Page Scripts -->
-   <script>
-   'use strict';
-
-   /* ═══════════════════════════════════════════
-      HEADER SCROLL STATE
-      ═══════════════════════════════════════════ */
-   const siteHeader = document.getElementById('site-header');
-   window.addEventListener('scroll', () => {
-      siteHeader.classList.toggle('scrolled', scrollY > 80);
-   }, { passive: true });
-
-   /* ═══════════════════════════════════════════
-      SMOOTH SCROLL for in-page hash links
-      ═══════════════════════════════════════════ */
-   document.addEventListener('click', (e) => {
-      const link = e.target.closest('a[href^="#"]');
-      if (!link) return;
-      const id = link.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (target) {
-         e.preventDefault();
-         target.scrollIntoView({ behavior: 'smooth' });
-      }
-   });
-
-   /* ═══════════════════════════════════════════
-      SCROLL REVEAL (IntersectionObserver)
-      ═══════════════════════════════════════════ */
-   const io = new IntersectionObserver((entries) => {
-      for (const entry of entries) {
-         if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            io.unobserve(entry.target);
-         }
-      }
-   }, { threshold: .1, rootMargin: '0px 0px -30px 0px' });
-
-   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
-   /* ═══════════════════════════════════════════
-      HERO PARALLAX on scroll (desktop only)
-      ═══════════════════════════════════════════ */
-   const heroSection = document.querySelector('section[aria-describedby="hero-section-hgroup"]');
-
-   if (heroSection && window.matchMedia('(min-width: 1025px)').matches) {
-      const hgroup   = heroSection.querySelector('hgroup');
-      const tagline  = heroSection.querySelector('.tagline');
-      const ctaLinks = heroSection.querySelectorAll(':scope > p:has(> a)');
-      const schedule = heroSection.querySelector('#example-schedule');
-
-      let ticking = false;
-      window.addEventListener('scroll', () => {
-         if (ticking) return;
-         ticking = true;
-         requestAnimationFrame(() => {
-            const rect = heroSection.getBoundingClientRect();
-            const progress = Math.max(0, Math.min(1, -rect.top / (heroSection.offsetHeight * .6)));
-
-            if (hgroup) {
-               hgroup.style.transform  = 'translateY(' + (progress * -40) + 'px)';
-               hgroup.style.opacity    = 1 - progress * .8;
-            }
-            if (tagline) {
-               tagline.style.transform = 'translateY(' + (progress * -20) + 'px)';
-               tagline.style.opacity   = 1 - progress;
-            }
-            ctaLinks.forEach(cta => {
-               cta.style.transform = 'translateY(' + (progress * -10) + 'px)';
-               cta.style.opacity   = 1 - progress;
-            });
-            if (schedule) {
-               schedule.style.transform = 'translateY(' + (progress * -30) + 'px) translateX(' + (progress * 20) + 'px)';
-               schedule.style.opacity   = 1 - progress * .7;
-            }
-
-            ticking = false;
-         });
-      }, { passive: true });
-   }
-   </script>
-</body>
-</html>
+         <p>We are committed to responding to all accessibility feedback in a timely manner and to making the necessary changes to ensure our site is a model of inclusive design.</p>
+         <p>Last Updated: <time datetime="2026-02-04">4 February 2026</time></p>
+      </div>
+   </article>
+</x-layouts.webpage>
