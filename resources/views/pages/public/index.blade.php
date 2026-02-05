@@ -767,16 +767,6 @@
                grid-template-columns: 1fr;
             }
          }
-
-         .keyword {
-            background-attachment: local;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-image: linear-gradient(45deg, var(--blue-bright) 0%, var(--teal) 100%) !important;
-            background-clip: text !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-         }
       </style>
    </x-slot:pageStyles>
 

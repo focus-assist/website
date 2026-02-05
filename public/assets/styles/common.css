@@ -545,3 +545,13 @@ body > footer > section[aria-labelledby="legal-footer-section-label"] {
    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'/%3E%3Cpolyline points='15 3 21 3 21 9'/%3E%3Cline x1='10' y1='14' x2='21' y2='3'/%3E%3C/svg%3E");
    mask-size: contain; -webkit-mask-size: contain;
 }
+
+.keyword {
+   background-attachment: local;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-image: linear-gradient(45deg, var(--blue-bright) 0%, var(--teal) 100%) !important;
+   background-clip: text !important;
+   -webkit-background-clip: text !important;
+   -webkit-text-fill-color: transparent !important;
+}
