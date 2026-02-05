@@ -38,11 +38,6 @@ class PublicWebpageController extends Controller
         return view( 'pages.public.blog.post' );
     }
 
-    public function showContactPage(): View
-    {
-        return view( 'pages.public.contact' );
-    }
-
     public function showAccessibilityStatementPage(): View
     {
         return view( 'pages.public.accessibility-statement' );
