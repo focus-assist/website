@@ -1,6 +1,6 @@
 <x-layouts.webpage>
    <x-slot:pageTitle>Accessibility Statement - Focus Assist LLC</x-slot:pageTitle>
-   <x-slot:pageDescription>The primary landing page for Focus Assist LLC</x-slot:pageDescription>
+   <x-slot:pageDescription></x-slot:pageDescription>
    <x-slot:metaData></x-slot:metaData>
    <x-slot:pageScripts></x-slot:pageScripts>
    <x-slot:pageStyles>
