@@ -849,7 +849,7 @@
                line-height: .95;
                color: var(--white);
 
-               & span { color: var(--teal); }
+               & span.keyword { color: var(--teal); }
             }
          }
 
@@ -937,6 +937,8 @@
                letter-spacing: -.02em;
                line-height: .95;
                color: var(--white);
+               
+               & span.keyword { color: var(--teal); }
             }
          }
 
@@ -1031,6 +1033,260 @@
       }
 
       /* ═══════════════════════════════════════════
+         OVERVIEW / STATS ASIDE
+         ═══════════════════════════════════════════ */
+      aside[aria-labelledby="overview-label"] {
+         background: var(--navy);
+         padding: 80px var(--gutter);
+
+         & > ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+
+            & > li {
+               display: flex;
+               flex-direction: column;
+               gap: 8px;
+
+               & > span.keyword {
+                  font-family: var(--font-d);
+                  font-size: clamp(32px, 4vw, 48px);
+                  font-weight: 700;
+                  color: var(--teal);
+                  line-height: 1;
+               }
+
+               & > span:not(.keyword) {
+                  font-size: .9rem;
+                  color: var(--g400);
+                  line-height: 1.4;
+               }
+            }
+         }
+      }
+
+      /* ═══════════════════════════════════════════
+         TESTIMONIALS SECTION
+         ═══════════════════════════════════════════ */
+      section[aria-labelledby="testamonials-label"] {
+         background: var(--navy-deep);
+         padding: 110px var(--gutter);
+
+         & > ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-items: center;
+            justify-content: center;
+            gap: 28px;
+            max-width: 1000px;
+            margin: 0 auto;
+
+            & > li {
+               & > figure {
+                  background: rgba(255, 255, 255, .04);
+                  backdrop-filter: blur(12px);
+                  -webkit-backdrop-filter: blur(12px);
+                  border: 1px solid rgba(255, 255, 255, .07);
+                  border-radius: 22px;
+                  padding: 34px;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: column;
+                  max-width: 400px;
+
+                  & > blockquote {
+                     flex: 1;
+                     position: relative;
+                     padding-top: 24px;
+
+                     &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-family: var(--font-d);
+                        font-size: 3rem;
+                        font-weight: 700;
+                        color: var(--g500);
+                        line-height: 1;
+                        opacity: .5;
+                     }
+
+                     & > p {
+                        font-size: .95rem;
+                        color: var(--g200);
+                        line-height: 1.75;
+                        font-style: italic;
+                     }
+                  }
+
+                  & > figcaption {
+                     margin-top: 24px;
+                     padding-top: 20px;
+                     border-top: 1px solid rgba(255, 255, 255, .06);
+
+                     & > cite {
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        font-style: normal;
+
+                        &::before {
+                           content: attr(data-initials);
+                           display: flex;
+                           align-items: center;
+                           justify-content: center;
+                           width: 44px;
+                           height: 44px;
+                           border-radius: 50%;
+                           background: linear-gradient(135deg, var(--blue), var(--blue-bright));
+                           color: var(--white);
+                           font-size: .8rem;
+                           font-weight: 600;
+                           flex-shrink: 0;
+                        }
+
+                        & > .name {
+                           display: block;
+                           font-weight: 600;
+                           font-size: .92rem;
+                           color: var(--white);
+                        }
+
+                        & > .title {
+                           display: block;
+                           font-size: .82rem;
+                           color: var(--g400);
+                           margin-top: 2px;
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      /* ═══════════════════════════════════════════
+         CONTACT US CTA SECTION
+         ═══════════════════════════════════════════ */
+      section[aria-describedby="contact-us-hgroup"] {
+         position: relative;
+         padding: 110px var(--gutter);
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         grid-template-areas: "title title" "tagline tagline" "contact about";
+         justify-content: center;
+         align-items: center;
+
+         & > * {
+            position: relative;
+            z-index: 1;
+         }
+
+         &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: calc(100% - var(--gutter) * 2);
+            max-width: 1000px;
+            height: calc(100% - 80px);
+            background: linear-gradient(
+               135deg,
+               rgba(15, 32, 53, 0.95) 0%,
+               rgba(10, 22, 40, 0.98) 100%
+            );
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 28px;
+            z-index: 0;
+         }
+
+         & > hgroup {
+            grid-area: title;
+            flex-basis: 100%;
+            text-align: center;
+            margin-bottom: 16px;
+
+            & > h2 {
+               font-family: var(--font-d);
+               font-size: clamp(28px, 4vw, 44px);
+               font-weight: 700;
+               letter-spacing: -.02em;
+               line-height: 1.1;
+               color: var(--white);
+
+               & > span { display: inline; }
+               & > span.keyword { color: var(--teal); }
+            }
+         }
+
+         & > p.tagline {
+            grid-area: tagline;
+            flex-basis: 100%;
+            text-align: center;
+            font-size: .96rem;
+            color: var(--g300);
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto 28px;
+         }
+
+         & > p:has(> a) {
+            display: inline-flex;
+            margin: 0 6px;
+         }
+
+         & > p:has( a[href="/contact"] ) { grid-area: contact; justify-self: end; }
+         & > p:has( a[href="/about"] ) { grid-area: about; justify-self: start; }
+
+         & > p > a[href="/contact"] > span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 26px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: .88rem;
+            background: linear-gradient(135deg, var(--teal), var(--blue-bright));
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(104, 191, 209, .3);
+            transition: transform .25s cubic-bezier(.16, 1, .3, 1), box-shadow .25s;
+            cursor: pointer;
+         }
+         & > p > a[href="/contact"]:hover > span {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 8px 32px rgba(104, 191, 209, .4);
+         }
+
+         & > p > a[href="/about"] > span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 26px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: .88rem;
+            background: rgba(255, 255, 255, .06);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, .12);
+            transition: transform .25s cubic-bezier(.16, 1, .3, 1), background .2s;
+            cursor: pointer;
+         }
+         & > p > a[href="/about"]:hover > span {
+            transform: translateY(-2px) scale(1.01);
+            background: rgba(255, 255, 255, .1);
+         }
+      }
+
+      /* ═══════════════════════════════════════════
          HOMEPAGE RESPONSIVE
          ═══════════════════════════════════════════ */
       @media (max-width: 1024px) {
@@ -1065,6 +1321,16 @@
          section[aria-labelledby="products-callout-label"] > ul {
             grid-template-columns: 1fr;
          }
+      }
+
+      .keyword {
+         background-attachment: local;
+         background-repeat: no-repeat;
+         background-size: contain;
+         background-image: linear-gradient(135deg, var(--teal) 0%, var(--blue-bright) 100%) !important;
+         background-clip: text !important;
+         -webkit-background-clip: text !important;
+         -webkit-text-fill-color: transparent !important;
       }
    </style>
 </head>
@@ -1207,7 +1473,7 @@
 
       <section aria-labelledby="products-callout-label">
          <hgroup class="reveal">
-            <h2 id="products-callout-label"><span>Purpose-Built Products</span></h2>
+            <h2 id="products-callout-label"><span class="keyword">Purpose-Built</span> <span>Products</span></h2>
             <h3><span>Our Software Suite</span></h3>
          </hgroup>
 
@@ -1245,20 +1511,20 @@
 
          <ul>
             <li>
-               <span class="keyword">Global</span>
-               <span>Reach &amp; Availability</span>
-            </li>
-            <li>
                <span class="keyword">Onsite</span>
                <span>Professionals Available</span>
             </li>
             <li>
-               <span class="keyword">Agile</span>
-               <span>&amp; Waterfall Support</span>
-            </li>
-            <li>
                <span class="keyword">3+</span>
                <span>Software Products</span>
+            </li>
+            <li>
+               <span class="keyword">Global</span>
+               <span>Reach &amp; Availability</span>
+            </li>
+            <li>
+               <span class="keyword">Agile</span>
+               <span>&amp; Waterfall Support</span>
             </li>
          </ul>
       </aside>
