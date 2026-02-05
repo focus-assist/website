@@ -1093,7 +1093,7 @@
          <p>&copy; 2026 Focus Assist LLC. All rights reserved.</p>
 
          <ul>
-            <li><a href="/accessibility-statement.html">Accessibility Statement</a></li>
+            <li><a href="/accessibility-statement">Accessibility Statement</a></li>
             <li><a href="/privacy-policy">Privacy Policy</a></li>
             <li><a href="/terms-of-service">Terms of Service</a></li>
          </ul>
