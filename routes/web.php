@@ -1,11 +1,7 @@
 <?php
 
+use App\Http\Controllers\Web\PublicWebpageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/accessibility-statement', function () {
-    return view('accessibility-statement');
-});
+Route::get( '/', [ PublicWebpageController::class, 'showHomepage' ] )->name( 'page.home' );
+Route::get( '/accessibility-statement', [ PublicWebpageController::class, 'showAccessibilityStatementPage' ] )->name( 'page.accessibility-statement' );
