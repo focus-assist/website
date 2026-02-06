@@ -40,6 +40,29 @@ class BlogResource extends JsonResource
     }
 
     /**
+     * Allow property-style access for Blade templates.
+     */
+    public function __get($key)
+    {
+        // Computed properties
+        if ($key === 'read_time_label') {
+            return $this->resource->read_time_minutes . ' min read';
+        }
+        if ($key === 'published_at_formatted') {
+            return $this->resource->published_at?->format('M j, Y');
+        }
+        if ($key === 'published_at_iso') {
+            return $this->resource->published_at?->toISOString();
+        }
+        if ($key === 'url') {
+            return route('public.blog.page.post', $this->resource->slug);
+        }
+
+        // Delegate to parent for model properties
+        return parent::__get($key);
+    }
+
+    /**
      * Get the underlying model.
      */
     public function getModel(): \App\Models\Blog

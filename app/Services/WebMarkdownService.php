@@ -13,15 +13,10 @@ class WebMarkdownService
     {
         $html = $markdown;
 
-        // Escape HTML entities first (for security)
-        // But preserve markdown syntax
-        $html = htmlspecialchars($html, ENT_NOQUOTES, 'UTF-8');
-
-        // Convert code blocks (must be done before other conversions)
+        // Convert code blocks first (must be done before other conversions)
         $html = preg_replace_callback('/```(\w+)?\n(.*?)```/s', function ($matches) {
             $language = $matches[1] ?? '';
-            $code = htmlspecialchars_decode($matches[2]);
-            $code = htmlspecialchars($code, ENT_QUOTES, 'UTF-8');
+            $code = htmlspecialchars($matches[2], ENT_QUOTES, 'UTF-8');
             $langAttr = $language ? " data-language=\"{$language}\"" : '';
             return "<pre{$langAttr}><code>" . trim($code) . "</code></pre>";
         }, $html);
