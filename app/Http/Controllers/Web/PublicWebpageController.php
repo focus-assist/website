@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Services\BlogService;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -28,14 +29,35 @@ class PublicWebpageController extends Controller
         return view( 'pages.public.about' );
     }
 
-    public function showBlogFeedPage(): View
+    public function showBlogFeedPage(Request $request): View
     {
-        return view( 'pages.public.blog.feed' );
+        $category = $request->query('category');
+        $posts = BlogService::GetPublishedPosts(perPage: 9, category: $category);
+        $featuredPost = BlogService::GetFeaturedPost();
+        $categories = BlogService::GetCategories();
+
+        return view( 'pages.public.blog.feed', [
+            'posts' => $posts,
+            'featuredPost' => $featuredPost,
+            'categories' => $categories,
+            'currentCategory' => $category,
+        ]);
     }
 
-    public function showBlogPostPage(): View
+    public function showBlogPostPage(string $post): View
     {
-        return view( 'pages.public.blog.post' );
+        $blogPost = BlogService::GetPostBySlug($post);
+
+        if (!$blogPost) {
+            abort(404);
+        }
+
+        $relatedPosts = BlogService::GetRelatedPosts($blogPost->getModel(), limit: 3);
+
+        return view( 'pages.public.blog.post', [
+            'post' => $blogPost,
+            'relatedPosts' => $relatedPosts,
+        ]);
     }
 
     public function showAccessibilityStatementPage(): View
